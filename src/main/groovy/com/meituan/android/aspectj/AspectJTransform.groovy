@@ -171,6 +171,7 @@ public class AspectJTransform extends Transform {
                 "-inpath", inpath,
                 "-d", output.absolutePath,
                 "-Xlint:" + xlintLevel,
+                "-Xset:generateNewLocalVariableTables=false", // for fixing problems with dex, see https://bugs.eclipse.org/bugs/show_bug.cgi?id=470658
                 "-bootclasspath", bootpath]
 
         // append classpath argument if any
